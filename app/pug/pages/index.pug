@@ -81,7 +81,7 @@ html(lang="en")
 										img(src='img/secure.png' alt='alt')
 		section.problems
 			.wrapper
-				.problems__container
+				.problems-container
 					h2.secondary-header Проблема 
 						span.secondary-header__color ума 
 						span.secondary-header__font или 
@@ -97,7 +97,7 @@ html(lang="en")
 							input.problems__btn(type='submit' value='внезапно')
 		section.description
 			.wrapper
-				.description__container
+				.description-container
 					.description__wrapper
 						h2.secondary-header Panto
 							span.secondary-header__color MAX
@@ -107,16 +107,51 @@ html(lang="en")
 							|– экопродукт, в состав которого входят натуральные компоненты. Препарат абсолютно совместим с клеточными жидкостями, быстро проникает в кровь и начинает действовать уже через 30 минут. Биогенный комплекс орешек действует на половые и репродуктивные функции мужского организма, эндокринные функции, гормональный статус. Также Название оказывает многоплановое действие на функции и состояние мозга, сердечно-сосудистой, пищеварительной, нервной, иммунной систем.
 		section.facts
 			.wrapper
-				//- .facts-bg
-				//- 	img(src='img/bg4.png' alt='alt')
-			h2.secondary-header Преимущества 
-				span.secondary-header__font пантовых орешек 
-				|Panto
-				span.secondary-header__color MAX
-			
+				.facts-bg
+					img(src='img/bg4.png' alt='alt')
+				h2.secondary-header Преимущества 
+					span.secondary-header__font пантовых орешек 
+					|Panto
+					span.secondary-header__color MAX
+				.facts-container
+					.facts__product
+						img(src='img/product2.png' alt='alt')
+					ul.facts-list
+						li.facts-list__item
+							img(src='img/facts-1.png' alt='alt')
+							p.facts-list__text Дарит яркие оргазмы
+						li.facts-list__item
+							img(src='img/facts-2.png' alt='alt')
+							p.facts-list__text Нормализует гормональный фон
+						li.facts-list__item
+							img(src='img/facts-3.png' alt='alt')
+							p.facts-list__text Избавляет от эректильной дисфункции
+						li.facts-list__item
+							img(src='img/facts-4.png' alt='alt')
+							p.facts-list__text Улучшает кровообращение в организме
+						li.facts-list__item
+							img(src='img/facts-5.png' alt='alt')
+							p.facts-list__text Повышает тонус и жизненные силы
+						li.facts-list__item
+							img(src='img/facts-6.png' alt='alt')
+							p.facts-list__text Регулирует либидо и желание
+		section.opinion
+			.wrapper
+				.opinion-container
+					.opinion-wrapper
+						h2.secondary-header Мнение 
+							span.secondary-header__color врача
+						p.opinion__paragraph
+						|	50% мужчин до 35 лет имеют проблемы с эрекцией. Поэтому при первых же признаках необходимо брать быка за рога и решать проблему.
+						p.opinion__paragraph
+						|	Я своим пациентам советую пантовые орешки Пантомакс, это натуральный препарат, который отлично влияет не только на потенцию, но и на весь организм.		
+						p.opinion__paragraph
+						|	При приеме Пантомакс у мужчины нормализуется работа сосудов и повышается потенция. Одним из действий препарата также является улучшение психоэмоциональной составляющей сексуальной жизни. Препарат поможет поддержать эрекцию во время всего полового акта. При этом эффект пантовых орешков не зависит от времени их приема.
+						p.opinion__author Ильнур Мухазин, врач-андролог, к.м.н.
+							img.opinion__signature(src='img/signature.png' alt='alt')
+					.opinion-doctor
+						img(src='img/doctor.png' alt='alt')
 
 
-
-				
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 		script(src='js/common.js')

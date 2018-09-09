@@ -375,7 +375,7 @@ a
 .problems
 	margin-bottom 67px
 
-	&__container
+	&-container
 		display flex
 		flex-direction column
 		align-items center
@@ -460,7 +460,7 @@ a
 .description
 	padding-bottom 55px
 
-	&__container
+	&-container
 		padding 30px 0 30px 40px
 		width 100%
 		min-height 392px
@@ -483,10 +483,17 @@ a
 			text-transform uppercase
 
 .facts
+	position relative
+	min-height 700px
 
 	&-bg
+		z-index -1
+		position absolute
+		top 50%
+		left 50%
 		width 781px
 		height 416px
+		transform translate(-72%, -8%)
 
 		img
 			line-height 0
@@ -494,3 +501,88 @@ a
 
 	.secondary-header
 		margin-bottom 30px
+
+	&-container
+		position relative
+		min-height 565px
+		display flex
+		justify-content flex-end
+
+	&__product
+		position absolute
+		top 62px
+		left -71px
+		width 441px
+		height 525px
+
+		img
+			line-height 0
+			object-fit cover
+
+	&-list
+		width 100%
+		max-width 660px
+		display flex
+		flex-wrap wrap
+
+		&__item
+			position relative
+			margin 10px
+			width 200px
+			height 250px
+		
+		&__text
+			position absolute
+			bottom 0
+			left 0
+			padding 20px 30px 5px
+			width 200px
+			height 80px
+			display block
+			font-size 16px
+			line-height 18px
+			font-weight 700
+			text-align center
+			color #0b0b0b
+
+.opinion
+	margin-bottom 10px
+
+	&-container
+		position relative
+		padding 30px 40px
+		width 100%
+		min-height 443px
+		font-size 16px
+		border-radius 10px
+		background url('../img/bg5.png') center no-repeat
+		background-size cover
+		overflow hidden
+
+	.secondary-header
+		margin-bottom 20px
+		text-align left
+		color #000
+
+	&-wrapper
+		max-width 565px
+
+	&__paragraph
+		margin-top 10px
+
+	&-doctor
+		position absolute
+		right -28px
+		bottom -16px
+
+	&__author
+		position relative
+		margin-top 25px
+		font-weight bold
+		font-style italic
+
+	&__signature
+		position absolute
+		bottom -13px
+		right 60px
+		
