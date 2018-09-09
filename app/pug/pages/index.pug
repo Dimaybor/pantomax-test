@@ -1,0 +1,122 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		title Pantomax
+		link(rel='stylesheet' type='text/css' href='css/normalize.css')
+		link(rel='stylesheet' type='text/css' href='css/main.css')
+		link(rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic")
+		link(rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic")
+		link(rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic")
+		link(rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic")
+	body
+		section.general-content
+			.bg
+				img(src='img/pup.png' alt='alt')
+			.wrapper
+				.logo-container
+					.logo
+						.logo-img
+							img(src='img/colden_deer.png' alt='alt')
+						.logo-name
+							img(src='img/name.png' alt='alt')
+					.advantages
+						.advantages__item
+							.advantages__img.advantages__img--nature
+								img(src='img/nature.png' alt='alt')
+							.advantages__text
+								span.advantages__percent 100%
+								span натурально
+						.advantages__item
+							.advantages__img.advantages__img--like
+								img(src='img/like.png' alt='alt')
+							.advantages__text
+								span.advantages__percent 100%
+								span эффективно
+				h1.main-heading сколько раз за ночь ты можешь?
+				.main
+					.main-col
+						p.main-col__subtitle Пантомакс – каменный стояк для неприличных рекордов
+						ul.main-col__list
+							li.main-col__item.main-col__item--line
+								p.main-col__advantage Мощная эрекция и потенция
+							li.main-col__item.main-col__item--line
+								p.main-col__advantage Занимайся сексом сколько хочешь
+							li.main-col__item.main-col__item--line
+								p.main-col__advantage Получай космические оргазмы
+							li.main-col__item
+								p.main-col__advantage Гарантированный стояк до 3-х часов
+						.main-col__product
+							img(src='img/product.png' alt='alt')
+					.main-col.main-col--bottom
+						.main-col__discount
+							img(src='img/-50.png' alt='alt')
+						p.main-col__info Ваша потенция вернется через 21 день применения! Проверьте сами
+					.main-col
+						.main-amount
+							.main-amount__number.main-amount__number--inactive 0
+							.main-amount__number 1
+							.main-amount__number 0
+							p.main-amount__auxiliary Всего упаковок по акции
+						.main-form
+							form(action='#' method='post')
+								.main-price
+									.main-price__full
+										p.main-price__container 
+											span.main-price__text Полная цена
+											span.main-price__value 1980
+											span.main-price__currency руб
+									.main-price__discount
+										p.main-price__container
+											span.main-price__text Цена со скидкой
+											span.main-price__value.main-price--bold 990
+											span.main-price__currency.main-price--bold руб
+								.main-form__container
+									input.main-form__field(type='text' name='name' placeholder='Введите ваше имя')
+									input.main-form__field(type='text' name='number' placeholder='Введите номер телефона')
+									.main-form__button
+										input(type='submit' value='заказать сейчас')
+									.main-form__secure Ваши данные под защитой SecureTECH
+										img(src='img/secure.png' alt='alt')
+		section.problems
+			.wrapper
+				.problems__container
+					h2.secondary-header Проблема 
+						span.secondary-header__color ума 
+						span.secondary-header__font или 
+						span.secondary-header__color тела
+						| ?
+					.problems__subtitle Ответьте всего на 2 вопроса и узнайте свой тип импотенции
+					.problems__questions
+						.problems__ask
+							.problems__counter 1
+							.problems__text как уменьшалась эрекция?
+						.problems__buttons
+							input.problems__btn(type='submit' value='постепенно')
+							input.problems__btn(type='submit' value='внезапно')
+		section.description
+			.wrapper
+				.description__container
+					.description__wrapper
+						h2.secondary-header Panto
+							span.secondary-header__color MAX
+							|  – максимальное удовольствие в сексе
+						p.description__text
+							span Пантовые орешки 
+							|– экопродукт, в состав которого входят натуральные компоненты. Препарат абсолютно совместим с клеточными жидкостями, быстро проникает в кровь и начинает действовать уже через 30 минут. Биогенный комплекс орешек действует на половые и репродуктивные функции мужского организма, эндокринные функции, гормональный статус. Также Название оказывает многоплановое действие на функции и состояние мозга, сердечно-сосудистой, пищеварительной, нервной, иммунной систем.
+		section.facts
+			.wrapper
+				//- .facts-bg
+				//- 	img(src='img/bg4.png' alt='alt')
+			h2.secondary-header Преимущества 
+				span.secondary-header__font пантовых орешек 
+				|Panto
+				span.secondary-header__color MAX
+			
+
+
+
+				
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+		script(src='js/common.js')

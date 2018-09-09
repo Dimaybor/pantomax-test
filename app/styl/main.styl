@@ -1,0 +1,496 @@
+*
+	margin 0
+	padding 0 
+	box-sizing border-box
+
+body
+	font-family 'PT Sans', sans-serif
+	font-size 17px
+	line-height 26px
+	font-weight 400
+	background-color #060606
+
+h1
+	margin 0
+
+li
+	list-style none
+	outline none
+
+img 
+	max-width 100%
+
+a
+	text-decoration none
+
+.wrapper
+	margin 0 auto
+	padding 0 25px
+	max-width 1030px
+
+.general-content
+	z-index 0
+	position relative
+	height 700px
+	background url('../img/bg.png') center no-repeat
+  background-size cover
+
+.bg
+	z-index -1
+	position absolute
+	top	45px
+	left 50%
+	width 506px
+	height 704px
+	transform translateX(-50%)
+
+	img
+		object-fit cover
+
+.logo-container
+	padding-bottom 15px
+	display flex
+	align-items flex-end
+	min-height 85px
+
+.logo
+	display flex
+	align-items center
+	height 55px
+	cursor pointer
+
+	&-img
+		width 43px
+		height 50px
+
+	&-name
+		width 200px
+		height 44px
+
+	&-img + &-name
+		margin-left 14px
+
+.logo + .advantages
+	margin-left 80px
+
+.advantages
+	display flex
+
+	&__item
+		display flex
+		height 37px
+		font-size 18px
+		line-height 24px
+		color #ededed
+
+		& + &
+			margin-left 30px
+
+	&__percent
+		margin-right 8px
+		font-size 24px
+		font-weight bold
+
+	&__img
+		width 100%
+		height 100%
+
+		&--nature
+			width 29px
+
+		&--like
+			width 42px
+
+	&__img + &__text
+		margin-left 10px
+
+	&__text
+		display flex
+		align-items center
+
+		span
+			display block
+			vertical-align bottom
+
+.logo-container + .main-heading
+	margin-top 20px
+
+.main-heading
+	font-family 'Roboto Condensed', sans-serif
+	font-size 60px
+	line-height 60px
+	font-weight bold
+	color #d7c578
+	text-transform uppercase
+
+.main-heading + .main
+	margin-top 25px
+
+.main
+	display flex
+
+	&-col
+		max-width 340px
+
+		&__discount
+			margin-bottom 10px
+			display flex
+			justify-content center
+
+		&__info
+			font-family 'PT Sans Narrow', sans-serif
+			font-size 19px
+			text-align center
+			color #fff
+
+		&--bottom
+			padding-bottom 60px
+			display flex
+			flex-direction column
+			justify-content flex-end
+
+		&__subtitle
+			padding-right 20px
+			font-size 22px
+			font-weight 500
+			color #fff
+
+		&__list + &__product
+			margin-top 15px
+
+		&__product
+			line-height 0
+
+			img
+				max-width 386px
+				object-fit cover
+
+		&__item
+			position relative
+
+			&--line
+
+				&::after
+					content ''
+					position absolute
+					top -85px
+					left 130px
+					width 1px
+					height 250px
+					background linear-gradient(rgba(85, 85, 85, 0.1), #555555, rgba(85, 85, 85, 0.1))
+					transform rotate(90deg)
+
+		&__advantage
+			position relative
+			padding-left 40px
+			font-size 16px
+			line-height 40px
+			color #e7e7e7
+
+			&::before
+				content ''
+				position absolute
+				top 7px
+				left 0
+				width 24px
+				height 24px
+				border 1px solid #a16c49
+				border-radius 50%
+				background-color #c33814
+
+			&::after
+				content ''
+				position absolute
+				top 17px
+				left 13px
+				width 9px
+				height 6px
+				border 3px solid #e7e7e7
+				border-width 0 0 3px 3px
+				transform translate(-50%, -50%) rotate(-45deg)
+
+	&-amount
+		display flex
+		font-family 'PT Sans Narrow', sans-serif
+		
+		&__number
+			position relative
+			width 50px
+			height 54px
+			font-size 50px
+			font-weight bold
+			text-align center
+			line-height 54px
+			background-color #f6f6f6
+			border-radius 5px
+
+			&::after
+				content ''
+				position absolute
+				top 50%
+				left 50%
+				width 48px
+				height 1px
+				background-color #cecece
+				transform translate(-50%, -50%)
+
+			& + &
+				margin-left 4px
+
+			&--inactive
+				opacity 0.7
+
+		&__number + &__auxiliary
+			margin-left 10px
+
+		&__auxiliary
+			position relative
+			padding 0 4px 15px 15px
+			width 130px
+			height 54px
+			font-size 19px
+			line-height 19px
+			color #fff
+			border-radius 5px
+			background-color rgba(0, 0, 0, 0.5)
+			transform translateY(10px)
+
+			&::before
+				content '*'
+				position absolute
+				top 0
+				left 7px
+
+	&-form
+		padding 36px
+		width 362px
+		height 482px
+		font-family 'PT Sans Narrow', sans-serif
+		background url('../img/form.png') center no-repeat
+		background-size cover
+
+		&__container
+			margin-top 20px
+			padding 0 18px
+
+		&__button
+			position relative
+
+			&::after
+				content ''
+				position absolute
+				top 50%
+				left 23px
+				width 8px
+				height 8px
+				border 2px solid #fff
+				border-width 0 2px 2px 0
+				transform translate(-50%, -50%) rotate(-45deg)
+
+			input
+				width 255px
+				height 60px
+				color #ffffff
+				font-family 'PT Sans Narrow', sans-serif
+				font-size 22px
+				font-weight bold
+				background linear-gradient(to top, #d84017, #f94a1b)
+				cursor pointer
+				outline none
+				border-radius 5px
+				border 0px solid #fff
+				border-left 50px solid #b13412
+				box-shadow 10px 10px 25px 2px rgba(254, 222, 214, 1)
+				text-transform uppercase
+
+		&__field
+			padding-left 12px
+			width 255px
+			height 55px
+			font-size 14px
+			border 1px solid #e1e1e1
+			border-radius 7px
+			outline none
+
+			& + &
+				margin-top 20px
+
+			& + .main-form__button
+				margin-top 25px
+		
+		&__secure
+			position relative
+			margin-top 17px
+			padding-left 33px
+			display block
+			font-size 15px
+
+			img
+				content ''
+				position absolute
+				top 3px 
+				left 9px
+
+	&-price
+		display flex
+		height 117px
+
+		&__full
+			position relative
+			width 50%
+			color #7f5c53
+
+			&::after
+				content ''
+				position absolute
+				top 70px
+				left 25px
+				width 86px
+				height 3px
+				background-color #7f5c53
+
+		&__container
+			padding 18px 0 0 24px
+			display block
+			font-size 18px
+
+		&__text
+			padding-bottom 8px
+			display block
+			font-size 18px
+
+		&__discount
+			width 50%
+			color #fff
+
+		&__value
+			font-size 48px
+
+		&__currency
+			font-size 24px
+		
+		&--bold
+			font-weight 700
+
+.problems
+	margin-bottom 67px
+
+	&__container
+		display flex
+		flex-direction column
+		align-items center
+		padding-top 70px
+		width 100%
+		min-height 452px
+		background url('../img/bg2.png') center no-repeat
+		background-size cover
+
+	&__subtitle
+		margin-top 15px
+		font-size 22px
+		text-align center
+		color #fff
+
+	&__questions
+		display flex
+		flex-direction column
+		align-items center
+		margin-top 20px
+		padding-top 30px
+		width 640px
+		min-height 260px
+		border-radius 10px
+		background-color #fff
+
+	&__ask
+		display flex
+		font-weight 700
+
+	&__text
+		margin-left 12px
+		font-size 24px
+		line-height 60px
+		text-transform uppercase
+
+	&__counter
+		width 60px
+		height 60px
+		font-size 30px
+		text-align center
+		line-height 60px
+		background-color #e5e5e5
+		border-radius 50px
+
+	&__buttons
+		display flex
+		margin-top 40px
+	
+	&__btn
+		width 250px
+		height 80px
+		font-family 'PT Sans', sans-serif
+		font-size 24px
+		font-weight 700
+		color #fff
+		background-color #fc481a
+		border none
+		border-radius 10px
+		cursor pointer
+		outline none
+		text-transform uppercase
+
+		& + &
+			margin-left 20px
+
+.secondary-header
+	font-family 'PT Sans Narrow', sans-serif
+	font-size 48px
+	line-height 52px
+	font-weight bold
+	text-align center
+	color #fff
+	text-transform uppercase
+
+	&__color
+		color #fc481a
+
+	&__font
+		font-weight 400
+
+.description
+	padding-bottom 55px
+
+	&__container
+		padding 30px 0 30px 40px
+		width 100%
+		min-height 392px
+		background url('../img/bg3.png') center no-repeat
+		background-size cover
+		border-radius 10px
+
+	&__wrapper
+		max-width 555px
+
+	.secondary-header
+		text-align left
+		color #000
+
+	&__text
+		margin-top 25px
+
+		span
+			font-weight bold
+			text-transform uppercase
+
+.facts
+
+	&-bg
+		width 781px
+		height 416px
+
+		img
+			line-height 0
+			object-fit cover
+
+	.secondary-header
+		margin-bottom 30px
