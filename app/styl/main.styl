@@ -31,10 +31,10 @@ a
 .general-content
 	z-index 0
 	position relative
-	height 700px
+	min-height 700px
 	background url('../img/bg.png') center no-repeat
-  background-size cover
-
+	background-size contain
+  
 .bg
 	z-index -1
 	position absolute
@@ -75,6 +75,7 @@ a
 
 .advantages
 	display flex
+	padding-bottom 6px
 
 	&__item
 		display flex
@@ -92,7 +93,6 @@ a
 		font-weight bold
 
 	&__img
-		width 100%
 		height 100%
 
 		&--nature
@@ -120,8 +120,11 @@ a
 	font-size 60px
 	line-height 60px
 	font-weight bold
-	color #d7c578
+	color transparent
 	text-transform uppercase
+	text-align center
+	background linear-gradient(to right, #f0e394, #b49b52)
+	-webkit-background-clip text
 
 .main-heading + .main
 	margin-top 25px
@@ -137,6 +140,9 @@ a
 			display flex
 			justify-content center
 
+			img 
+				object-fit contain
+
 		&__info
 			font-family 'PT Sans Narrow', sans-serif
 			font-size 19px
@@ -144,10 +150,11 @@ a
 			color #fff
 
 		&--bottom
-			padding-bottom 60px
+			padding-bottom 50px
 			display flex
 			flex-direction column
 			justify-content flex-end
+			transform translateX(22px)
 
 		&__subtitle
 			padding-right 20px
@@ -210,6 +217,7 @@ a
 				transform translate(-50%, -50%) rotate(-45deg)
 
 	&-amount
+		padding-left 35px
 		display flex
 		font-family 'PT Sans Narrow', sans-serif
 		
@@ -246,7 +254,7 @@ a
 		&__auxiliary
 			position relative
 			padding 0 4px 15px 15px
-			width 130px
+			width 122px
 			height 54px
 			font-size 19px
 			line-height 19px
@@ -262,12 +270,21 @@ a
 				left 7px
 
 	&-form
+		position relative
 		padding 36px
 		width 362px
 		height 482px
 		font-family 'PT Sans Narrow', sans-serif
 		background url('../img/form.png') center no-repeat
 		background-size cover
+
+		&__shine
+			position absolute
+			top 25px
+			left 45px
+			width 115px
+			height 21px
+			background url('../img/shine.png') center no-repeat
 
 		&__container
 			margin-top 20px
@@ -426,6 +443,7 @@ a
 		margin-top 40px
 	
 	&__btn
+		z-index 9
 		width 250px
 		height 80px
 		font-family 'PT Sans', sans-serif
@@ -433,14 +451,35 @@ a
 		font-weight 700
 		color #fff
 		background-color #fc481a
-		border none
 		border-radius 10px
+		border none
 		cursor pointer
 		outline none
 		text-transform uppercase
 
+	&__inner
+		position relative
+		overflow hidden
+		border-radius 10px
+
+		&:hover
+			background-color #fff
+			opacity 0.8
+	
 		& + &
 			margin-left 20px
+
+		&::after 
+			content ''
+			position absolute
+			top -801px 
+			left -300px
+			width 850px
+			height 850px
+			border-radius 50%
+			background-color #ffffff
+			opacity 0.1
+			cursor pointer
 
 .secondary-header
 	font-family 'PT Sans Narrow', sans-serif
@@ -546,7 +585,7 @@ a
 			color #0b0b0b
 
 .opinion
-	margin-bottom 10px
+	margin-bottom 20px
 
 	&-container
 		position relative
@@ -586,3 +625,217 @@ a
 		bottom -13px
 		right 60px
 		
+@media screen and (max-width: 1024px)
+
+	.advantages
+		&__percent
+			font-size 20px
+
+		&__item
+			font-size 16px
+
+	.logo + .advantages
+		margin-left 50px
+
+	.logo-container + .main-heading
+		margin-top 5px
+
+	.main
+		flex-wrap wrap
+		justify-content space-around
+
+		&-heading
+			font-size 52px
+			line-height 52px
+
+		&-col--bottom
+			order 1
+			padding-bottom 0
+			padding-top 30px
+			width 100%
+
+		&-col--bg
+			background-color rgba(0, 0, 0, 0.5)
+
+	.description
+		&-container
+			padding 15px 0 15px 25px
+
+		&__wrapper
+			max-width 460px
+
+		&__text
+			padding-right 5px
+
+	.secondary-header
+		font-size 40px
+		line-height 44px
+
+	.facts
+		&-container
+			flex-direction column
+			align-items center
+
+		&__product
+			position static
+			width 100%
+			max-width 300px
+			height auto
+
+		&-bg
+			top 28%
+			max-width 100%
+			transform translate(-50%, -50%)
+			object-fit cover
+
+	.opinion
+		&-container
+			margin-top 15px
+			padding 15px 20px
+
+		&-wrapper
+			max-width 63%
+
+		&-doctor
+			bottom -22px
+			right -20px
+			width 308px
+			height 371px
+
+			img
+				line-height 0
+
+		&__author
+			margin-top 15px
+		
+		&__signature
+			bottom -8px
+			right 0
+			width 185px - 30%
+			height 64px - 30%
+
+@media screen and (max-width: 768px)
+
+	.wrapper
+		padding 0 15px
+
+	.logo
+
+		&-container
+			padding-top 10px
+			padding-bottom 0
+			align-items center
+			justify-content space-between
+
+		&-img
+			width 43px - 30%
+			height 50px - 30%
+
+		&-name
+			width 200px - 30%
+			height 44px - 30%
+
+	.advantages
+		padding-bottom 10px
+		flex-direction column
+
+		& &__text--indent
+			margin-left 20px
+
+		&__item + &__item
+			margin-left 0
+
+		&__img
+			display flex
+			align-items center
+			height auto 
+
+			&--nature
+				width 29px - 30%
+
+			&--like
+				width 42px - 30%
+
+	.facts
+		&__product
+			max-width 250px
+
+		&-list
+			justify-content center
+
+	.problems
+		&__questions
+			padding-top 10px
+			padding-bottom 40px
+			max-width 100%
+			min-height auto
+
+		&-container
+			min-height 380px
+			
+		&__buttons
+			margin-top 20px
+
+		&__inner + &__inner
+			margin-left 10px
+		
+		&__inner::after
+			top -817px
+			left -319px
+
+		&__btn
+			width 250px - 40px
+			height 80px - 30px
+			font-size 20px
+
+	.bg
+		max-width 100%
+
+	.main
+		flex-wrap nowrap 
+		flex-direction column
+		align-items center
+
+		&-heading
+			font-size 45px
+			line-height 45px
+
+			& + .main
+				margin-top 0
+		
+		&-col
+			margin-top 40px
+
+			&--bottom
+				transform translateX(0)
+
+	.description__wrapper
+		max-width 95%
+
+	.description-container
+		background-image none
+		background-color #fff
+
+@media screen and (max-width: 710px)
+
+	.opinion-wrapper
+		max-width 100%
+
+	.opinion-doctor
+		position static
+		display flex
+		justify-content flex-end
+		width 100%
+		height auto
+
+		img
+			width 308px - 25%
+			height 371px - 25%
+
+@media screen and (max-width: 560px)
+
+	.facts__product
+		max-width 200px
+
+	.opinion-doctor
+		justify-content center

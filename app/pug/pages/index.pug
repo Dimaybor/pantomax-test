@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="ru")
 	head
 		meta(charset="UTF-8")
 		meta(name='viewport' content='width=device-width, initial-scale=1')
@@ -25,7 +25,7 @@ html(lang="en")
 						.advantages__item
 							.advantages__img.advantages__img--nature
 								img(src='img/nature.png' alt='alt')
-							.advantages__text
+							.advantages__text.advantages__text--indent
 								span.advantages__percent 100%
 								span натурально
 						.advantages__item
@@ -36,7 +36,7 @@ html(lang="en")
 								span эффективно
 				h1.main-heading сколько раз за ночь ты можешь?
 				.main
-					.main-col
+					.main-col.main-col--bg
 						p.main-col__subtitle Пантомакс – каменный стояк для неприличных рекордов
 						ul.main-col__list
 							li.main-col__item.main-col__item--line
@@ -60,6 +60,7 @@ html(lang="en")
 							.main-amount__number 0
 							p.main-amount__auxiliary Всего упаковок по акции
 						.main-form
+							.main-form__shine
 							form(action='#' method='post')
 								.main-price
 									.main-price__full
@@ -93,8 +94,10 @@ html(lang="en")
 							.problems__counter 1
 							.problems__text как уменьшалась эрекция?
 						.problems__buttons
-							input.problems__btn(type='submit' value='постепенно')
-							input.problems__btn(type='submit' value='внезапно')
+							.problems__inner
+								button.problems__btn постепенно
+							.problems__inner
+								button.problems__btn внезапно
 		section.description
 			.wrapper
 				.description-container
@@ -151,7 +154,3 @@ html(lang="en")
 							img.opinion__signature(src='img/signature.png' alt='alt')
 					.opinion-doctor
 						img(src='img/doctor.png' alt='alt')
-
-
-		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
-		script(src='js/common.js')
