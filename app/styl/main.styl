@@ -74,8 +74,8 @@ a
 	margin-left 80px
 
 .advantages
-	display flex
 	padding-bottom 6px
+	display flex
 
 	&__item
 		display flex
@@ -393,10 +393,10 @@ a
 	margin-bottom 67px
 
 	&-container
+		padding-top 70px
 		display flex
 		flex-direction column
 		align-items center
-		padding-top 70px
 		width 100%
 		min-height 452px
 		background url('../img/bg2.png') center no-repeat
@@ -409,11 +409,11 @@ a
 		color #fff
 
 	&__questions
+		margin-top 20px
+		padding-top 30px
 		display flex
 		flex-direction column
 		align-items center
-		margin-top 20px
-		padding-top 30px
 		width 640px
 		min-height 260px
 		border-radius 10px
@@ -439,8 +439,8 @@ a
 		border-radius 50px
 
 	&__buttons
-		display flex
 		margin-top 40px
+		display flex
 	
 	&__btn
 		z-index 9
@@ -543,9 +543,9 @@ a
 
 	&-container
 		position relative
-		min-height 565px
 		display flex
 		justify-content flex-end
+		min-height 565px
 
 	&__product
 		position absolute
@@ -559,10 +559,10 @@ a
 			object-fit cover
 
 	&-list
-		width 100%
-		max-width 660px
 		display flex
 		flex-wrap wrap
+		width 100%
+		max-width 660px
 
 		&__item
 			position relative
@@ -658,6 +658,7 @@ a
 			background-color rgba(0, 0, 0, 0.5)
 
 	.description
+
 		&-container
 			padding 15px 0 15px 25px
 
@@ -672,6 +673,7 @@ a
 		line-height 44px
 
 	.facts
+
 		&-container
 			flex-direction column
 			align-items center
@@ -686,9 +688,9 @@ a
 			top 28%
 			max-width 100%
 			transform translate(-50%, -50%)
-			object-fit cover
 
 	.opinion
+
 		&-container
 			margin-top 15px
 			padding 15px 20px
@@ -722,10 +724,10 @@ a
 	.logo
 
 		&-container
-			padding-top 10px
-			padding-bottom 0
 			align-items center
 			justify-content space-between
+			padding-top 10px
+			padding-bottom 0
 
 		&-img
 			width 43px - 30%
@@ -736,8 +738,8 @@ a
 			height 44px - 30%
 
 	.advantages
-		padding-bottom 10px
 		flex-direction column
+		padding-bottom 10px
 
 		& &__text--indent
 			margin-left 20px
@@ -757,6 +759,11 @@ a
 				width 42px - 30%
 
 	.facts
+
+		.secondary-header
+			margin-bottom 5px
+			min-height 132px
+
 		&__product
 			max-width 250px
 
@@ -810,9 +817,11 @@ a
 				transform translateX(0)
 
 	.description__wrapper
-		max-width 95%
+		max-width 100%
 
 	.description-container
+		padding 15px
+		min-height auto
 		background-image none
 		background-color #fff
 
@@ -839,3 +848,127 @@ a
 
 	.opinion-doctor
 		justify-content center
+
+@media screen and (max-width: 480px)
+
+	.secondary-header
+		font-size 36px
+		line-height 40px
+
+	.wrapper
+		padding 0 10px
+
+	.logo-container
+		flex-direction column
+
+	.logo + .advantages
+		margin-left 0
+
+	.main-col
+		display flex
+		flex-direction column
+		justify-content center
+		max-width 300px
+		overflow hidden
+		
+		&__subtitle
+			padding 0 5px
+
+		&__product img
+			max-width 300px
+
+		&--bottom
+			padding-top 0
+
+		&__discount img
+			width 250px
+
+	.general-content
+		background none
+
+	.main-heading
+		background linear-gradient(to right, #e4c97a, #e4c97a)
+		-webkit-background-clip text
+
+	.description-container
+		margin -10px
+		padding 15px
+		width 100vw
+		border-radius 0
+
+	.bg img
+		opacity 0.6
+
+	.main-amount
+		padding-left 0
+
+	.main-form
+		transform translateX(-31px)
+
+	.problems
+
+		&__counter
+			width 50px
+			height 50px
+			font-size 25px
+			line-height 50px
+
+		&-container
+			padding-top 40px
+			background none
+
+		&__text
+			line-height 50px
+			text-align center
+
+		&__ask
+			flex-direction column
+			width 100%
+
+		&__questions
+			padding 5px 5px 40px
+
+		&__buttons
+			flex-direction column
+			align-items center
+
+		&__inner + &__inner
+			margin 20px 0 0
+			
+	.facts
+
+		&-list
+			flex-direction column
+			align-items center
+			flex-wrap nowrap
+			padding-bottom 15px
+
+		&__product
+			max-width 150px
+
+		&-bg
+			top 18%
+
+		& .secondary-header
+			margin-bottom 50px
+
+	.opinion
+		margin-bottom 0
+
+		&-container
+			margin 0 -10px
+			padding 15px
+			width 100vw
+			background #fff
+			border-radius 0
+
+		&-doctor
+			margin-top 30px
+
+		&__signature
+			bottom -45px
+
+@media screen and (max-width: 420px)
+
+	.facts-bg
+		top 20.5%
